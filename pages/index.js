@@ -20,11 +20,11 @@ export default function HomePage() {
 
   return (
     <div>
+      <h1>Hello from Next.js</h1>
       <Spotlight
         artist={randomImage.artist}
         image={randomImage.imageSource}
       ></Spotlight>
-      <h1>Hello from Next.js</h1>
       <ArtPieces pieces={data}> Testing the art pieces </ArtPieces>
     </div>
   );
