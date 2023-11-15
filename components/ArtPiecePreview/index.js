@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function ArtPiecePreview({ title, artist, image }) {
+export function ArtPiecePreview({ title, artist, image, colors }) {
   return (
     <>
       <h1> {artist} </h1>

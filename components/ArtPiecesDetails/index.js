@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function ArtPiecesDetails({ image, name, artist, year, genre }) {
+export function ArtPiecesDetails({ image, name, artist, year, genre, colors }) {
   return (
     <>
       <h1> {artist} </h1>
