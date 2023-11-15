@@ -6,9 +6,10 @@ export default function ArtPieceDetailsPage({ pieces }) {
   const router = useRouter();
   const { slug } = router.query;
 
-  const { imageSource, name, artist, year, genre } = pieces.find(
+  const { imageSource, name, artist, year, genre, colors } = pieces.find(
     (piece) => piece.slug === slug
   );
+  console.log("colors of artPiece: ", colors);
 
   return (
     <>
@@ -18,6 +19,7 @@ export default function ArtPieceDetailsPage({ pieces }) {
         artist={artist}
         year={year}
         genre={genre}
+        // color={color[0]}
       />
     </>
   );
