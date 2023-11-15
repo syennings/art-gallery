@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }) {
       <Layout />
       <Component
         {...pageProps}
+        pieces={data}
         image={randomImage.imageSource}
         artist={randomImage.artist}
       />
