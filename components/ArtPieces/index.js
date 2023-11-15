@@ -1,10 +1,10 @@
 import { ArtPiecePreview } from "../ArtPiecePreview";
+import Image from "next/image";
 
 export function ArtPieces({ pieces = [] }) {
   return (
     <>
       <ul>
-
         {pieces.map((piece) => (
           <li key={piece.slug}>
             <ArtPiecePreview
@@ -34,7 +34,6 @@ export function ArtPieces({ pieces = [] }) {
               />
             </li>
           ))}
-
       </ul>
     </>
   );
