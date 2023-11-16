@@ -6,7 +6,7 @@ export function FavoriteButton({ isFavorite, onToggleFavorite, slug }) {
       <button
         type="button"
         onClick={() => onToggleFavorite(slug)}
-        isFavorite={isFavorite}
+        style={{ backgroundColor: isFavorite ? "red" : "transparent" }}
       >
         <Image
           src="./resources_gallery/assets/heart.svg"

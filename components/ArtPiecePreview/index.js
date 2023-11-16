@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { FavoriteButton } from "../FavoriteButton";
 
-export function ArtPiecePreview({ title, artist, image, colors }) {
+export function ArtPiecePreview({ title, artist, image }) {
   return (
     <>
       <h1> {artist} </h1>

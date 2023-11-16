@@ -8,6 +8,8 @@ export function Spotlight({
   onToggleFavorite,
   isFavorite,
 }) {
+  console.log("slug", slug);
+  console.log("is Favorite", isFavorite);
   return (
     <>
       <h1> A Highlight Piece From The Collection</h1>

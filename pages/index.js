@@ -1,6 +1,12 @@
 import { Spotlight } from "@/components/Spotlight";
 
-export default function SpotlightPage({ artist, image, onToggleFavorite }) {
+export default function SpotlightPage({
+  slug,
+  artist,
+  image,
+  onToggleFavorite,
+  artPiecesInfo,
+}) {
   return (
     <div>
       <h1>Hello from Next.js</h1>
@@ -8,6 +14,7 @@ export default function SpotlightPage({ artist, image, onToggleFavorite }) {
         onToggleFavorite={onToggleFavorite}
         artist={artist}
         image={image}
+        slug={slug}
       ></Spotlight>
     </div>
   );

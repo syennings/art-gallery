@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FavoriteButton } from "../FavoriteButton";
 
 export function ArtPiecesDetails({ image, name, artist, year, genre, colors }) {
   return (
