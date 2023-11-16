@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export function FavoriteButton({ onToggleFavorite, slug }) {
+  console.log("favourite button", onToggleFavorite);
   return (
     <>
       <button type="button" onClick={() => onToggleFavorite(slug)}>

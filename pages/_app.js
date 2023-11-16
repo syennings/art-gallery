@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
   });
   const [randomImg, setRandomImg] = useState();
 
-  function handleToggleFavorite(slug) {
+  function onToggleFavorite(slug) {
     const artPiece = artPiecesInfo?.find((piece) => piece.slug === slug);
     if (artPiece) {
       return setArtPiecesInfo(
@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }) {
       <Component
         {...pageProps}
         artPiecesInfo={artPiecesInfo}
-        onToggleFavorite={handleToggleFavorite}
+        onToggleFavorite={onToggleFavorite}
         pieces={data}
         image={randomImg?.imageSource}
         artist={randomImg?.artist}
