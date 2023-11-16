@@ -59,6 +59,7 @@ export default function App({ Component, pageProps }) {
         pieces={data}
         image={randomImg?.imageSource}
         artist={randomImg?.artist}
+        slug={randomImg?.slug}
       />
     </>
   );

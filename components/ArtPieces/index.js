@@ -1,7 +1,7 @@
 import { ArtPiecePreview } from "../ArtPiecePreview";
 import Link from "next/link";
 
-export function ArtPieces({ pieces = [] }) {
+export function ArtPieces({ pieces = [], onToggleFavorite }) {
   const invertColor = (hex) => {
     // Function to invert a hex color
     return (
@@ -9,6 +9,9 @@ export function ArtPieces({ pieces = [] }) {
       (0xffffff ^ parseInt(hex.slice(1), 16)).toString(16).padStart(6, "0")
     );
   };
+
+  console.log("onToggleFavorite art pieces component", onToggleFavorite);
+
   return (
     <>
       <ul>
@@ -16,10 +19,12 @@ export function ArtPieces({ pieces = [] }) {
           <li key={piece.slug}>
             <Link href={`/art-pieces/${piece.slug}`}>
               <ArtPiecePreview
+                onToggleFavorite={onToggleFavorite}
                 artist={piece.artist}
                 title={piece.name}
                 image={piece.imageSource}
                 colors={piece.colors}
+                slug={piece.slug}
               />
             </Link>
             <div style={{ display: "flex" }}>

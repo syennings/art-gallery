@@ -7,10 +7,13 @@ export default function SpotlightPage({
   onToggleFavorite,
   artPiecesInfo,
 }) {
+  console.log("slug", slug);
+
   return (
     <div>
       <h1>Hello from Next.js</h1>
       <Spotlight
+        artPiecesInfo={artPiecesInfo}
         onToggleFavorite={onToggleFavorite}
         artist={artist}
         image={image}
