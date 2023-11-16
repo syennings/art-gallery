@@ -1,7 +1,6 @@
 import GlobalStyle from "../styles";
 import { Layout } from "@/components/Layout";
 import useSWR from "swr";
-import { useImmerLocalStorageState } from "@/public/resources_gallery/lib/hook/useImmerLocalStorageState";
 import useLocalStorageState from "use-local-storage-state";
 import { useEffect, useState } from "react";
 
@@ -16,11 +15,10 @@ export default function App({ Component, pageProps }) {
   });
   const [randomImg, setRandomImg] = useState();
 
-  console.log("artPiecesInfo", artPiecesInfo);
-  function handleToggleFavorite(slug) {
+  function onToggleFavorite(slug) {
     const artPiece = artPiecesInfo?.find((piece) => piece.slug === slug);
     if (artPiece) {
-      setArtPiecesInfo(
+      return setArtPiecesInfo(
         artPiecesInfo.map((pieceInfo) =>
           pieceInfo.slug === slug
             ? { slug, isFavorite: !pieceInfo.isFavorite }
@@ -28,9 +26,10 @@ export default function App({ Component, pageProps }) {
         )
       );
     } else {
-      setArtPiecesInfo([...artPiecesInfo, { slug, isFavorite: true }]);
+      return setArtPiecesInfo([...artPiecesInfo, { slug, isFavorite: true }]);
     }
   }
+
   function getRandomImage(data) {
     return data[Math.floor(Math.random() * data.length)];
   }
@@ -47,6 +46,7 @@ export default function App({ Component, pageProps }) {
 
   // const randomImage = getRandomImage(data);
   console.log("randomImg", randomImg);
+  console.log("artPiecesInfo", artPiecesInfo);
 
   return (
     <>
@@ -55,10 +55,11 @@ export default function App({ Component, pageProps }) {
       <Component
         {...pageProps}
         artPiecesInfo={artPiecesInfo}
-        onToggleFavorite={handleToggleFavorite}
+        onToggleFavorite={onToggleFavorite}
         pieces={data}
         image={randomImg?.imageSource}
         artist={randomImg?.artist}
+        slug={randomImg?.slug}
       />
     </>
   );
