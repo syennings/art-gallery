@@ -17,16 +17,15 @@ export function ArtPieces({ pieces = [], onToggleFavorite }) {
       <ul>
         {pieces.map((piece) => (
           <li key={piece.slug}>
-            <Link href={`/art-pieces/${piece.slug}`}>
-              <ArtPiecePreview
-                onToggleFavorite={onToggleFavorite}
-                artist={piece.artist}
-                title={piece.name}
-                image={piece.imageSource}
-                colors={piece.colors}
-                slug={piece.slug}
-              />
-            </Link>
+            <ArtPiecePreview
+              onToggleFavorite={onToggleFavorite}
+              artist={piece.artist}
+              title={piece.name}
+              image={piece.imageSource}
+              colors={piece.colors}
+              slug={piece.slug}
+            />
+            <Link href={`/art-pieces/${piece.slug}`}>Look at Details</Link>
             <div style={{ display: "flex" }}>
               {piece.colors.map((color, index) => (
                 <div
