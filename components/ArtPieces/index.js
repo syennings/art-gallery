@@ -30,10 +30,14 @@ export function ArtPieces({
               image={piece.imageSource}
               colors={piece.colors}
               slug={piece.slug}
+
               onHandleCommens={onHandleComment}
               comments={comments}
             />
             <Link href={`/art-pieces/${piece.slug}`}>More Details</Link>
+
+          
+
             <div style={{ display: "flex" }}>
               {piece.colors.map((color, index) => (
                 <div
