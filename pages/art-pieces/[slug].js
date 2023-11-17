@@ -7,6 +7,7 @@ export default function ArtPieceDetailsPage({
   onToggleFavorite,
   artPiecesInfo,
   isFavorite,
+  onHandleComment,
 }) {
   const router = useRouter();
   let { slug } = router.query;
@@ -15,6 +16,11 @@ export default function ArtPieceDetailsPage({
     (piece) => piece.slug === slug
   );
   console.log("colors of artPiece: ", colors);
+  console.log("artPiecesInfo", artPiecesInfo);
+
+  let comments = artPiecesInfo.find((piece) => piece.slug === slug)?.comments;
+
+  console.log("alllll the comments", comments);
 
   return (
     <>
@@ -28,8 +34,8 @@ export default function ArtPieceDetailsPage({
         slug={slug}
         artPiecesInfo={artPiecesInfo}
         isFavorite={isFavorite}
-
-        // color={color[0]}
+        onHandleComment={onHandleComment}
+        comments={comments}
       />
     </>
   );

@@ -1,7 +1,13 @@
 import { ArtPiecePreview } from "../ArtPiecePreview";
 import Link from "next/link";
 
-export function ArtPieces({ pieces = [], onToggleFavorite }) {
+export function ArtPieces({
+  pieces = [],
+  onToggleFavorite,
+
+  onHandleComment,
+  comments,
+}) {
   const invertColor = (hex) => {
     // Function to invert a hex color
     return (
@@ -24,8 +30,14 @@ export function ArtPieces({ pieces = [], onToggleFavorite }) {
               image={piece.imageSource}
               colors={piece.colors}
               slug={piece.slug}
+
+              onHandleCommens={onHandleComment}
+              comments={comments}
             />
-            <Link href={`/art-pieces/${piece.slug}`}>Look at Details</Link>
+            <Link href={`/art-pieces/${piece.slug}`}>More Details</Link>
+
+          
+
             <div style={{ display: "flex" }}>
               {piece.colors.map((color, index) => (
                 <div

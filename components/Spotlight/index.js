@@ -8,6 +8,8 @@ export function Spotlight({
   artist,
   onToggleFavorite,
   isFavorite,
+  onHandleComment,
+  comments,
 }) {
   console.log("slug", slug);
   console.log("art info", artPiecesInfo);
@@ -22,6 +24,8 @@ export function Spotlight({
         isFavorite={isFavorite}
         onToggleFavorite={onToggleFavorite}
         slug={slug}
+        onHandleComment={onHandleComment}
+        comments={comments}
       ></FavoriteButton>
     </>
   );
