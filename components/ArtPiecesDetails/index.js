@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FavoriteButton } from "../FavoriteButton";
 import { CommentForm } from "../CommentForm";
-import RenderComments from "../Comments";
+import { Comments } from "../Comments";
 
 export function ArtPiecesDetails({
   image,
@@ -35,8 +35,12 @@ export function ArtPiecesDetails({
         slug={slug}
         onToggleFavorite={onToggleFavorite}
       ></FavoriteButton>
-      {comments && <RenderComments comments={comments} />}
-      <CommentForm onHandleComment={onHandleComment}></CommentForm>
+      {comments && <Comments comments={comments} />}
+      <CommentForm
+        onHandleComment={onHandleComment}
+        comments={comments}
+        slug={slug}
+      ></CommentForm>
     </>
   );
 }

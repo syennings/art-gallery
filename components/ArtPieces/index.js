@@ -6,6 +6,7 @@ export function ArtPieces({
   onToggleFavorite,
 
   onHandleComment,
+  comments,
 }) {
   const invertColor = (hex) => {
     // Function to invert a hex color
@@ -30,6 +31,7 @@ export function ArtPieces({
               colors={piece.colors}
               slug={piece.slug}
               onHandleCommens={onHandleComment}
+              comments={comments}
             />
             <Link href={`/art-pieces/${piece.slug}`}>More Details</Link>
             <div style={{ display: "flex" }}>

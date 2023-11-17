@@ -16,6 +16,11 @@ export default function ArtPieceDetailsPage({
     (piece) => piece.slug === slug
   );
   console.log("colors of artPiece: ", colors);
+  console.log("artPiecesInfo", artPiecesInfo);
+
+  let comments = artPiecesInfo.find((piece) => piece.slug === slug)?.comments;
+
+  console.log("alllll the comments", comments);
 
   return (
     <>
@@ -30,6 +35,7 @@ export default function ArtPieceDetailsPage({
         artPiecesInfo={artPiecesInfo}
         isFavorite={isFavorite}
         onHandleComment={onHandleComment}
+        comments={comments}
       />
     </>
   );

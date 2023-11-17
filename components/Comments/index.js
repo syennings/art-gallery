@@ -1,14 +1,13 @@
-export default function RenderComments({ comments }) {
+export function Comments({ comments }) {
   console.log("received comments:", comments);
   return (
     <>
-      <h2>Comments</h2>
+      <h2>Past Comments</h2>
+
       <ul>
         {comments.map((comment, index) => (
           <li key={index}>
-            <p>
-              <q>{comment}</q>
-            </p>
+            <p> {comment} </p>
           </li>
         ))}
       </ul>
