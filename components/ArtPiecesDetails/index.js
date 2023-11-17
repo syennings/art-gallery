@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FavoriteButton } from "../FavoriteButton";
+import { CommentForm } from "../CommentForm";
+import RenderComments from "../Comments";
 
 export function ArtPiecesDetails({
   image,
@@ -12,8 +14,13 @@ export function ArtPiecesDetails({
   isFavorite,
   slug,
   onToggleFavorite,
+  onHandleComment,
+  comments,
 }) {
   console.log("toggle detaisls", onToggleFavorite);
+  console.log("onHandleComment", onHandleComment);
+  console.log("comment", comments);
+
   return (
     <>
       <h1> {artist} </h1>
@@ -28,6 +35,8 @@ export function ArtPiecesDetails({
         slug={slug}
         onToggleFavorite={onToggleFavorite}
       ></FavoriteButton>
+      {comments && <RenderComments comments={comments} />}
+      <CommentForm onHandleComment={onHandleComment}></CommentForm>
     </>
   );
 }

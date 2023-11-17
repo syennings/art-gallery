@@ -6,6 +6,8 @@ export default function SpotlightPage({
   image,
   onToggleFavorite,
   artPiecesInfo,
+  onHandleComment,
+  comments,
 }) {
   console.log("slug", slug);
 
@@ -18,6 +20,8 @@ export default function SpotlightPage({
         artist={artist}
         image={image}
         slug={slug}
+        onHandleComment={onHandleComment}
+        comments={comments}
       ></Spotlight>
     </div>
   );

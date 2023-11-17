@@ -9,6 +9,7 @@ export function ArtPiecePreview({
   isFavorite,
   artPiecesInfo,
   onToggleFavorite,
+  onHandleComment,
 }) {
   console.log("a new slug", slug);
   return (
@@ -27,6 +28,7 @@ export function ArtPiecePreview({
         isFavorite={isFavorite}
         slug={slug}
         onToggleFavorite={onToggleFavorite}
+        onHandleComment={onHandleComment}
       ></FavoriteButton>
     </>
   );

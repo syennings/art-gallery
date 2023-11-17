@@ -2,6 +2,7 @@ import Image from "next/image";
 
 export function FavoriteButton({ onToggleFavorite, slug }) {
   console.log("favourite button", onToggleFavorite);
+
   return (
     <>
       <button type="button" onClick={() => onToggleFavorite(slug)}>
@@ -10,6 +11,7 @@ export function FavoriteButton({ onToggleFavorite, slug }) {
           alt="heart"
           width={60}
           height={60}
+          style={{ color: "red" }}
         />
       </button>
     </>

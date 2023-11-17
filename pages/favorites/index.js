@@ -4,6 +4,8 @@ export default function FavoritesPage({
   pieces,
   artPiecesInfo,
   onToggleFavorite,
+  onHandleComment,
+  comments,
 }) {
   const favorites = pieces.filter((piece) =>
     artPiecesInfo.find(
@@ -18,6 +20,8 @@ export default function FavoritesPage({
       <ArtPieces
         pieces={favorites}
         onToggleFavorite={onToggleFavorite}
+        onHandleComment={onHandleComment}
+        comments={comments}
       ></ArtPieces>
     </>
   );
