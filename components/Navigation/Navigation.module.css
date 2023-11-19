@@ -1,0 +1,22 @@
+/* styles/Navigation.module.css */
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e0e0e0;
+  color: rgb(84, 84, 84);
+  padding: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(109, 93, 93);
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: #61dafb; /* Change the color on hover */
+}

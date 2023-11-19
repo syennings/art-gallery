@@ -1,11 +1,18 @@
 import Link from "next/link";
+import styles from "./Navigation.module.css";
 
 export function Navigation() {
   return (
-    <>
-      <Link href="/art-pieces">Link To All Art</Link>
-      <Link href="/">Link to the Spotlight Page</Link>
-      <Link href="/favorites"> Favorites</Link>
-    </>
+    <nav className={styles.nav}>
+      <Link href="/art-pieces" passHref>
+        All Art
+      </Link>
+      <Link href="/" passHref>
+        Spotlight Page
+      </Link>
+      <Link href="/favorites" passHref>
+        Favorites
+      </Link>
+    </nav>
   );
 }

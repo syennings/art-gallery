@@ -1,0 +1,54 @@
+/* ArtPiecesStyles.module.css */
+
+.ArtPiecesList {
+  list-style: none;
+  padding: 0;
+}
+
+.ArtPieceListItem {
+  margin-bottom: 20px;
+}
+
+.ArtPiecePreviewContainer {
+  display: flex;
+  align-items: center;
+}
+
+.ArtPiecePreviewContainer img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.ArtPieceDetails {
+  flex: 1;
+}
+
+.ColorPalette {
+  display: flex;
+  margin-top: 10px;
+}
+
+.ColorBox {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.MoreDetailsLink {
+  margin-top: 10px;
+  display: block;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.MoreDetailsLink:hover {
+  text-decoration: underline;
+}
