@@ -14,22 +14,26 @@ export function ArtPiecePreview({
   console.log("a new slug", slug);
   return (
     <>
-      <h1> {artist} </h1>
-      <h2> {title} </h2>
-      <Image
-        src={image}
-        alt={title}
-        width={500}
-        height={500}
-        onError={(e) => console.error(`Error loading image: ${e.target.src}`)}
-      />
-      <FavoriteButton
-        artPiecesInfo={artPiecesInfo}
-        isFavorite={isFavorite}
-        slug={slug}
-        onToggleFavorite={onToggleFavorite}
-        onHandleComment={onHandleComment}
-      ></FavoriteButton>
+      <div>
+        <h1> {artist} </h1>
+        <h2> {title} </h2>
+        <Image
+          src={image}
+          alt={title}
+          width={500}
+          height={500}
+          onError={(e) => console.error(`Error loading image: ${e.target.src}`)}
+        />
+      </div>
+      <div>
+        <FavoriteButton
+          artPiecesInfo={artPiecesInfo}
+          isFavorite={isFavorite}
+          slug={slug}
+          onToggleFavorite={onToggleFavorite}
+          onHandleComment={onHandleComment}
+        ></FavoriteButton>
+      </div>
     </>
   );
 }

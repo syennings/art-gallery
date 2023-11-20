@@ -17,7 +17,7 @@ export function Spotlight({
   return (
     <>
       <h1> A Highlight Piece From The Collection</h1>
-      <Image src={image} alt={artist} width={300} height={300} />
+      <Image src={image} alt={artist} width={600} height={600} />
       <h3> Name of Artist: {artist} </h3>
       <FavoriteButton
         artPiecesInfo={artPiecesInfo}
