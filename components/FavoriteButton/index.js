@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./FavoriteButton.module.css"; // Adjust the import path accordingly
 import Image from "next/image";
+
 export function FavoriteButton({ onToggleFavorite, slug }) {
   console.log("favourite button", onToggleFavorite);
 
